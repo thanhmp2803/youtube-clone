@@ -6,7 +6,6 @@
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -14,7 +13,6 @@
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
-
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
@@ -22,16 +20,16 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
-
     "baseUrl": ".",
     "paths": {
-      "@assets/*": ["./src/assets/*"],
-      "@components/*": ["./src/components/*"],
-      "@constants/*": ["./src/constants/*"],
-      "@routes/*": ["./src/routes/*"],
-      "@types/*": ["./src/types/*"],
-      "@utils/*": ["./src/utils/*"],
-      "@views/*": ["./src/views/*"]
+      "@assets": ["./src/assets"],
+      "@components": ["./src/components"],
+      "@constants": ["./src/constants"],
+      "@routes": ["./src/routes"],
+      "@types": ["./src/types"],
+      "@utils": ["./src/utils"],
+      "@views": ["./src/views"],
+      "@locales": ["./src/locales"]
     }
   },
   "include": ["src"]
