@@ -14,6 +14,7 @@ export default defineConfig({
       '@types': path.resolve(__dirname, './src/types'),
       '@utils': path.resolve(__dirname, './src/utils'),
       '@views': path.resolve(__dirname, './src/views'),
+      '@locales': path.resolve(__dirname, './src/locales'),
     },
   },
 })
