@@ -15,6 +15,8 @@ export default defineConfig({
       '@utils': path.resolve(__dirname, './src/utils'),
       '@views': path.resolve(__dirname, './src/views'),
       '@locales': path.resolve(__dirname, './src/locales'),
+      '@styles': path.resolve(__dirname, './src/styles'),
+      '@ytlogo': path.resolve(__dirname, './images/YouTube-Logo.png'),
     },
   },
 })
