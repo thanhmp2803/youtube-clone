@@ -58,4 +58,11 @@ const menu4 = (t: TFunction<'translation', undefined>) => [
   },
 ]
 
-export { menu1, menu2, menu3, menu4 }
+const sidebarData = (t: TFunction<'translation', undefined>) => [
+  { items: menu1(t), separator: true },
+  { items: menu2(t), title: t('you'), separator: true },
+  { items: menu3(t), title: t('explore'), separator: true },
+  { items: menu4(t), separator: false },
+]
+
+export { sidebarData }

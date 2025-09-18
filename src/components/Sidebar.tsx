@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import '@assets/styles/sidebar.css'
-import { menu1, menu2, menu3, menu4 } from '../mocks'
+import { sidebarData } from '../mocks'
 import { SubMenu } from './SubMenu'
 
 interface ISidebarProps {
@@ -45,21 +45,13 @@ export const Sidebar: React.FC<ISidebarProps> = ({ showIconsWhenClosed = false }
           </button>
         </div>
         <div className="offcanvas-body p-0">
-          <SubMenu items={menu1(t)} />
-
-          {/* Phone profile menu */}
-          <hr />
-          {!collapsed && <h6 className="px-2 text-muted">{t('you')}</h6>}
-          <SubMenu items={menu2(t)} />
-
-          {/* Phone explore menu */}
-          <hr />
-          {!collapsed && <h6 className="px-2 text-muted">{t('explore')}</h6>}
-          <SubMenu items={menu3(t)} />
-
-          {/* Phone settings menu */}
-          <hr />
-          <SubMenu items={menu4(t)} />
+          {sidebarData(t).map((menu, index) => (
+            <React.Fragment key={index}>
+              {menu.separator && <hr />}
+              {menu.title && <h6 className="px-2 text-muted">{menu.title}</h6>}
+              <SubMenu items={menu.items} />
+            </React.Fragment>
+          ))}
         </div>
       </div>
 
@@ -83,27 +75,14 @@ export const Sidebar: React.FC<ISidebarProps> = ({ showIconsWhenClosed = false }
         </button>
 
         {/* Content when expanded or showIconsWhenClosed */}
-        {(!collapsed || showIconsWhenClosed) && (
-          <>
-            <hr />
-            {/* Main menu */}
-            <SubMenu items={menu1(t)} collapsed={collapsed} />
-
-            {/* Profile menu */}
-            <hr />
-            {!collapsed && <h6 className="px-2 text-muted">{t('you')}</h6>}
-            <SubMenu items={menu2(t)} collapsed={collapsed} />
-
-            {/* Explore menu */}
-            <hr />
-            {!collapsed && <h6 className="px-2 text-muted">{t('explore')}</h6>}
-            <SubMenu items={menu3(t)} collapsed={collapsed} />
-
-            {/* Settings menu */}
-            <hr />
-            <SubMenu items={menu4(t)} collapsed={collapsed} />
-          </>
-        )}
+        {(!collapsed || showIconsWhenClosed) &&
+          sidebarData(t).map((menu, index) => (
+            <React.Fragment key={index}>
+              {menu.separator && <hr />}
+              {!collapsed && menu.title && <h6 className="px-2 text-muted">{menu.title}</h6>}
+              <SubMenu items={menu.items} collapsed={collapsed} />
+            </React.Fragment>
+          ))}
       </div>
     </>
   )
