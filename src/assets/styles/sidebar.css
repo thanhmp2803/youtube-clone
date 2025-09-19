@@ -1,0 +1,58 @@
+.sidebar-logo-pc {
+  height: 60%;
+  width: 100%;
+  object-fit: contain;
+  margin-left: 8px;
+  position: relative;
+  display: block;
+}
+.sidebar-logo-mb {
+  display: flex;
+  align-items: center;
+  height: 90px;
+  margin-left: 16px;
+  width: 90px;
+  object-fit: contain;
+}
+
+.sidebar-close-btn {
+  border: none;
+  background: transparent;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  box-shadow: none;
+}
+.sidebar-hover {
+  transition:
+    background 0.15s,
+    font-weight 0.15s;
+}
+.sidebar-hover:hover {
+  background: #f1f3f4;
+  cursor: pointer;
+}
+.sidebar {
+  height: 100vh;
+  transition: width 0.1s;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 220px;
+}
+.sidebar.collapsed {
+  width: 60px;
+}
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+.sidebar:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+.offcanvas.phone-sidebar {
+  width: 240px;
+  --bs-offcanvas-width: 240px;
+}
