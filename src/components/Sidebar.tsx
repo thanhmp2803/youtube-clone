@@ -28,11 +28,10 @@ export const Sidebar: React.FC<ISidebarProps> = ({ showIconsWhenClosed = false }
 
       {/* Phone sidebar menu */}
       <div
-        className="offcanvas offcanvas-start d-md-none"
+        className="offcanvas offcanvas-start d-md-none phone-sidebar"
         tabIndex={-1}
         id="sidebarOffcanvas"
         aria-labelledby="sidebarOffcanvasLabel"
-        style={{ width: '240px' }}
       >
         <div className="offcanvas-header">
           <button
@@ -56,13 +55,7 @@ export const Sidebar: React.FC<ISidebarProps> = ({ showIconsWhenClosed = false }
       </div>
 
       <div
-        className={`d-none d-md-flex d-flex flex-column flex-shrink-0 p-2 `}
-        style={{
-          width: collapsed ? '60px' : '240px',
-          height: '100vh',
-          transition: 'width 0.1s',
-          overflowX: 'hidden',
-        }}
+        className={`d-none d-md-flex d-flex flex-column flex-shrink-0 p-2 sidebar ${collapsed ? 'collapsed' : ''}`}
       >
         {/* Collapse/Expand button */}
 

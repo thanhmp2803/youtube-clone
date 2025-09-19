@@ -29,8 +29,7 @@
       "@types": ["./src/types"],
       "@utils": ["./src/utils"],
       "@views": ["./src/views"],
-      "@locales": ["./src/locales"],
-      "@styles": ["./src/styles"]
+      "@locales": ["./src/locales"]
     }
   },
   "include": ["src"]

@@ -32,3 +32,27 @@
   background: #f1f3f4;
   cursor: pointer;
 }
+.sidebar {
+  height: 100vh;
+  transition: width 0.1s;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 220px;
+}
+.sidebar.collapsed {
+  width: 60px;
+}
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+.sidebar:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+.offcanvas.phone-sidebar {
+  width: 240px;
+  --bs-offcanvas-width: 240px;
+}
