@@ -7,25 +7,19 @@ import { SubMenu } from './SubMenu'
 
 interface ISidebarProps {
   showIconsWhenClosed?: boolean
+  collapsed?: boolean
 }
 
-export const Sidebar: React.FC<ISidebarProps> = ({ showIconsWhenClosed = false }) => {
+export const Sidebar: React.FC<ISidebarProps> = ({
+  showIconsWhenClosed = false,
+  collapsed: collapsedProp,
+}) => {
   const { t } = useTranslation()
-  const [collapsed, setCollapsed] = useState(false)
+  const [internalCollapsed] = useState(false)
+  const collapsed = typeof collapsedProp === 'boolean' ? collapsedProp : internalCollapsed
 
   return (
     <>
-      {/* Phone collapse button */}
-      <button
-        className="btn btn-light d-md-none mb-2"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#sidebarOffcanvas"
-        aria-controls="sidebarOffcanvas"
-      >
-        <RxHamburgerMenu size={22} />
-      </button>
-
       {/* Phone sidebar menu */}
       <div
         className="offcanvas offcanvas-start d-md-none phone-sidebar"
@@ -57,16 +51,6 @@ export const Sidebar: React.FC<ISidebarProps> = ({ showIconsWhenClosed = false }
       <div
         className={`d-none d-md-flex d-flex flex-column flex-shrink-0 p-2 sidebar ${collapsed ? 'collapsed' : ''}`}
       >
-        {/* Collapse/Expand button */}
-
-        <button
-          className="btn btn-light mb-2 align-self-start"
-          onClick={() => setCollapsed((prev) => !prev)}
-          aria-label={collapsed ? t('expandSidebar') : t('collapseSidebar')}
-        >
-          <RxHamburgerMenu size={22} />
-        </button>
-
         {/* Content when expanded or showIconsWhenClosed */}
         {(!collapsed || showIconsWhenClosed) &&
           sidebarData(t).map((menu, index) => (

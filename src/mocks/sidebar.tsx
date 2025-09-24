@@ -117,7 +117,7 @@ const menu4 = (t: TFunction<'translation', undefined>) => [
 ]
 
 const sidebarData = (t: TFunction<'translation', undefined>) => [
-  { items: menu1(t), separator: true },
+  { items: menu1(t), separator: false },
   { items: menu2(t), title: t('sidebar.profile.you'), separator: true },
   { items: menu3(t), title: t('sidebar.explore.explore'), separator: true },
   { items: menu4(t), separator: true },
