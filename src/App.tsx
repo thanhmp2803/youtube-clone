@@ -1,4 +1,9 @@
-import { Sidebar } from '@components'
+import { Layout } from '@components'
+
 export const App = () => {
-  return <Sidebar />
+  return (
+    <Layout>
+      <p> Video list</p>
+    </Layout>
+  )
 }
