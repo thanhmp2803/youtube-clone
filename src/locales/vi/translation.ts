@@ -27,6 +27,24 @@ const vi = {
       sendFeedback: 'Gửi ý kiến phản hồi',
     },
   },
+  header: {
+    search: 'Tìm kiếm',
+    create: 'Tạo',
+  },
+  tags: {
+    all: 'Tất cả',
+    music: 'Âm nhạc',
+    gaming: 'Trò chơi',
+    news: 'Tin tức',
+    sports: 'Thể thao',
+    live: 'Trực tiếp',
+    learning: 'Học tập',
+    fashion: 'Thời trang',
+    comedy: 'Hài kịch',
+    movies: 'Phim',
+    cooking: 'Nấu ăn',
+    travel: 'Du lịch',
+  },
 }
 
 export default vi

@@ -1,0 +1,17 @@
+.nav {
+  font-weight: 500;
+  white-space: nowrap;
+}
+.tag-scroll-btn {
+  z-index: 2000;
+  opacity: 0.9;
+  font-size: 0.75rem;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}

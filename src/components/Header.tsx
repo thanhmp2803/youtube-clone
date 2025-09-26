@@ -29,7 +29,7 @@ export const Header: React.FC<HeaderProps> = ({ collapsed, setCollapsed }) => {
   }, [])
 
   return (
-    <header className="d-flex align-items-center justify-content-between py-2 border-bottom sticky-top bg-white flex-nowrap w-100 overflow-x-hidden">
+    <header className="d-flex align-items-center justify-content-between py-2 sticky-top bg-white flex-nowrap w-100 overflow-x-hidden">
       {/* Left: Button + Logo */}
       <div className="d-flex align-items-center">
         {/* PC collapse button */}

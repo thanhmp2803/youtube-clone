@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import '@assets/styles/sidebar.css'
-import { sidebarData } from '../mocks'
+import { sidebarData } from '@mocks'
 import { SubMenu } from './SubMenu'
 
 interface ISidebarProps {

@@ -45,11 +45,11 @@
   width: 60px;
 }
 .sidebar::-webkit-scrollbar {
-  width: 0; /* ẩn thanh cuộn */
+  width: 0; /* hide scrollbar */
   height: 0;
 }
 .sidebar:hover::-webkit-scrollbar {
-  width: 5px; /* hiện lại khi hover */
+  width: 5px;
 }
 .sidebar::-webkit-scrollbar-thumb {
   background-color: transparent;

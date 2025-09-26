@@ -27,6 +27,24 @@ const en = {
       sendFeedback: 'Send feedback',
     },
   },
+  header: {
+    search: 'Search',
+    create: 'Create',
+  },
+  tags: {
+    all: 'All',
+    music: 'Music',
+    gaming: 'Gaming',
+    news: 'News',
+    sports: 'Sports',
+    live: 'Live',
+    learning: 'Learning',
+    fashion: 'Fashion',
+    comedy: 'Comedy',
+    movies: 'Movies',
+    cooking: 'Cooking',
+    travel: 'Travel',
+  },
 }
 
 export default en
