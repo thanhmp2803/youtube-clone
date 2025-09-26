@@ -1,14 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { Tag } from './Tag'
-import type { ITag } from '../types/tag'
-import { TagData } from '../mocks'
+import type { ITag } from '@types'
+import { generateTagData } from '@mocks'
 import { useTranslation } from 'react-i18next'
 import { FaChevronRight, FaChevronLeft } from 'react-icons/fa6'
 import '@assets/styles/tag.css'
 
 export const TagList: React.FC = () => {
   const { t } = useTranslation()
-  const tags: ITag[] = TagData(t)
+  const tags: ITag[] = generateTagData(t)
 
   const [activeTagId, setActiveTagId] = useState<string>(tags[0]?.id || '')
   const [showLeft, setShowLeft] = useState(false)

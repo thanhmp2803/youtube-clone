@@ -1,7 +1,7 @@
 import type { TFunction } from 'i18next'
-import type { ITag } from '../types/tag'
+import type { ITag } from '@types'
 
-const TagData = (t: TFunction<'translation', undefined>): ITag[] => [
+const generateTagData = (t: TFunction<'translation', undefined>): ITag[] => [
   { id: 'all', label: t('tags.all'), url: '#' },
   { id: 'music', label: t('tags.music'), url: '#' },
   { id: 'gaming', label: t('tags.gaming'), url: '#' },
@@ -15,4 +15,4 @@ const TagData = (t: TFunction<'translation', undefined>): ITag[] => [
   { id: 'cooking', label: t('tags.cooking'), url: '#' },
   { id: 'travel', label: t('tags.travel'), url: '#' },
 ]
-export { TagData }
+export { generateTagData }

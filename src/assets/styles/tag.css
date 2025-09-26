@@ -1,5 +1,6 @@
 .nav {
   font-weight: 500;
+  white-space: nowrap;
 }
 .tag-scroll-btn {
   z-index: 2000;

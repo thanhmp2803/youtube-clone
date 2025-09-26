@@ -1,5 +1,5 @@
 import React from 'react'
-import type { ITag } from '../types/tag'
+import type { ITag } from '@types'
 import { useTranslation } from 'react-i18next'
 
 interface ITagProps {
