@@ -45,6 +45,31 @@ const en = {
     cooking: 'Cooking',
     travel: 'Travel',
   },
+  videoCard: {
+    video: {
+      title: 'This is a cute cat',
+      channel: 'Channel Name',
+      views: 'views',
+      time: 'ago',
+    },
+    time: {
+      days_one: '{{count}} day',
+      days_other: '{{count}} days',
+      months_one: '{{count}} month',
+      months_other: '{{count}} months',
+      years_one: '{{count}} year',
+      years_other: '{{count}} years',
+    },
+    menu: {
+      addToQueue: 'Add to queue',
+      saveToWatchLater: 'Save to Watch later',
+      saveToPlaylist: 'Save to playlist',
+      share: 'Share',
+      notInterested: 'Not interested',
+      dontRecommendChannel: "Don't recommend channel",
+      report: 'Report',
+    },
+  },
 }
 
 export default en

@@ -45,6 +45,31 @@ const vi = {
     cooking: 'Nấu ăn',
     travel: 'Du lịch',
   },
+  videoCard: {
+    video: {
+      title: 'Đây là một chú mèo dễ thương',
+      channel: 'Tên kênh',
+      views: 'lượt xem',
+      time: 'trước',
+    },
+    time: {
+      days_one: '{{count}} ngày',
+      days_other: '{{count}} ngày',
+      months_one: '{{count}} tháng',
+      months_other: '{{count}} tháng',
+      years_one: '{{count}} năm',
+      years_other: '{{count}} năm',
+    },
+    menu: {
+      addToQueue: 'Thêm vào danh sách chờ',
+      saveToWatchLater: 'Lưu vào Xem sau',
+      saveToPlaylist: 'Lưu vào danh sách phát',
+      share: 'Chia sẻ',
+      notInterested: 'Không quan tâm',
+      dontRecommendChannel: 'Không đề xuất kênh',
+      report: 'Báo cáo',
+    },
+  },
 }
 
 export default vi

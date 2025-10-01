@@ -1,9 +1,10 @@
 import { Layout } from '@components'
+import { VideoList } from '@components'
 
 export const App = () => {
   return (
     <Layout>
-      <p> Video list</p>
+      <VideoList />
     </Layout>
   )
 }
