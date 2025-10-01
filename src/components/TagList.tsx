@@ -47,7 +47,7 @@ export const TagList: React.FC = () => {
       {showLeft && (
         <button
           type="button"
-          className="btn btn-light position-absolute top-50 mt-1 translate-middle-y rounded-circle tag-scroll-btn "
+          className="btn btn-light position-absolute top-50 translate-middle-y rounded-circle tag-scroll-btn"
           onClick={scrollLeft}
         >
           <FaChevronLeft />
@@ -70,7 +70,7 @@ export const TagList: React.FC = () => {
       {/* Right scroll button */}
       <button
         type="button"
-        className="btn btn-light position-absolute top-50 end-0 mt-1 translate-middle-y rounded-circle tag-scroll-btn"
+        className="btn btn-light position-absolute top-50 end-0 translate-middle-y rounded-circle tag-scroll-btn"
         onClick={scrollRight}
       >
         <FaChevronRight />
