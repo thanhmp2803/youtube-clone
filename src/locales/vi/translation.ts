@@ -9,7 +9,7 @@ const vi = {
       you: 'Bạn',
       history: 'Video đã xem',
       playlist: 'Danh sách phát',
-      watchLater: 'Xem sau',
+      watch_later: 'Xem sau',
       liked: 'Video đã thích',
       downloads: 'Nội dung tải xuống',
     },
@@ -22,9 +22,9 @@ const vi = {
     },
     settings: {
       settings: 'Cài đặt',
-      reportHistory: 'Nhật ký báo cáo',
+      report_history: 'Nhật ký báo cáo',
       help: 'Trợ giúp',
-      sendFeedback: 'Gửi ý kiến phản hồi',
+      send_feedback: 'Gửi ý kiến phản hồi',
     },
   },
   header: {

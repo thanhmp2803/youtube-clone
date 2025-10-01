@@ -9,7 +9,7 @@ const en = {
       you: 'You',
       history: 'History',
       playlist: 'Playlists',
-      watchLater: 'Watch later',
+      watch_later: 'Watch later',
       liked: 'Liked videos',
       downloads: 'Downloads',
     },
@@ -22,9 +22,9 @@ const en = {
     },
     settings: {
       settings: 'Settings',
-      reportHistory: 'Report history',
+      report_history: 'Report history',
       help: 'Help',
-      sendFeedback: 'Send feedback',
+      send_feedback: 'Send feedback',
     },
   },
   header: {
