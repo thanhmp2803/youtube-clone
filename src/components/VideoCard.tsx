@@ -21,6 +21,16 @@ interface IVideo {
 
 export const VideoCard: React.FC<{ video: IVideo }> = ({ video }) => {
   const { t } = useTranslation()
+  const menuItems = [
+    { icon: <PiQueue />, label: t('video_card.menu.add_to_queue') },
+    { icon: <MdOutlineWatchLater />, label: t('video_card.menu.save_to_watch_later') },
+    { icon: <LuBookmark />, label: t('video_card.menu.save_to_playlist') },
+    { icon: <PiShareFat />, label: t('video_card.menu.share') },
+    { icon: <IoBanSharp />, label: t('video_card.menu.not_interested') },
+    { icon: <MdOutlineDoNotDisturbOn />, label: t('video_card.menu.dont_recommend_channel') },
+    { icon: <HiOutlineFlag />, label: t('video_card.menu.report') },
+  ]
+
   return (
     <div className="card border-0">
       {/* Thumbnail */}
@@ -52,56 +62,21 @@ export const VideoCard: React.FC<{ video: IVideo }> = ({ video }) => {
                   className="dropdown-menu dropdown-menu-end "
                   aria-labelledby="dropdownMenuButton"
                 >
-                  <li>
-                    {' '}
-                    <button className="dropdown-item">
-                      {' '}
-                      <PiQueue /> {t('videoCard.menu.addToQueue')}{' '}
-                    </button>
-                  </li>
-                  <li>
-                    <button className="dropdown-item">
-                      {' '}
-                      <MdOutlineWatchLater /> {t('videoCard.menu.saveToWatchLater')}
-                    </button>
-                  </li>
-                  <li>
-                    <button className="dropdown-item">
-                      {' '}
-                      <LuBookmark /> {t('videoCard.menu.saveToPlaylist')}
-                    </button>
-                  </li>
-                  <li>
-                    <button className="dropdown-item">
-                      {' '}
-                      <PiShareFat /> {t('videoCard.menu.share')}
-                    </button>
-                  </li>
-                  <li>
-                    <button className="dropdown-item">
-                      {' '}
-                      <IoBanSharp /> {t('videoCard.menu.notInterested')}
-                    </button>
-                  </li>
-                  <li>
-                    <button className="dropdown-item">
-                      {' '}
-                      <MdOutlineDoNotDisturbOn /> {t('videoCard.menu.dontRecommendChannel')}
-                    </button>
-                  </li>
-                  <li>
-                    <button className="dropdown-item">
-                      {' '}
-                      <HiOutlineFlag /> {t('videoCard.menu.report')}
-                    </button>
-                  </li>
+                  {menuItems.map((item, index) => (
+                    <li key={index}>
+                      <button className="dropdown-item d-flex align-items-center" type="button">
+                        {item.icon} {item.label}
+                      </button>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
             <p className="text-muted small mb-0">{video.channel} </p>
             <p className="text-muted small">
               {' '}
-              {video.views} {t('videoCard.video.views')} • {video.time} {t('videoCard.video.time')}
+              {video.views} {t('video_card.video.views')} • {video.time}{' '}
+              {t('video_card.video.time')}
             </p>
           </div>
         </div>

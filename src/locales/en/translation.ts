@@ -45,7 +45,7 @@ const en = {
     cooking: 'Cooking',
     travel: 'Travel',
   },
-  videoCard: {
+  video_card: {
     video: {
       title: 'This is a cute cat',
       channel: 'Channel Name',
@@ -61,12 +61,12 @@ const en = {
       years_other: '{{count}} years',
     },
     menu: {
-      addToQueue: 'Add to queue',
-      saveToWatchLater: 'Save to Watch later',
-      saveToPlaylist: 'Save to playlist',
+      add_to_queue: 'Add to queue',
+      save_to_watch_later: 'Save to Watch later',
+      save_to_playlist: 'Save to playlist',
       share: 'Share',
-      notInterested: 'Not interested',
-      dontRecommendChannel: "Don't recommend channel",
+      not_interested: 'Not interested',
+      dont_recommend_channel: "Don't recommend channel",
       report: 'Report',
     },
   },

@@ -45,7 +45,7 @@ const vi = {
     cooking: 'Nấu ăn',
     travel: 'Du lịch',
   },
-  videoCard: {
+  video_card: {
     video: {
       title: 'Đây là một chú mèo dễ thương',
       channel: 'Tên kênh',
@@ -61,12 +61,12 @@ const vi = {
       years_other: '{{count}} năm',
     },
     menu: {
-      addToQueue: 'Thêm vào danh sách chờ',
-      saveToWatchLater: 'Lưu vào Xem sau',
-      saveToPlaylist: 'Lưu vào danh sách phát',
+      add_to_queue: 'Thêm vào danh sách chờ',
+      save_to_watch_later: 'Lưu vào Xem sau',
+      save_to_playlist: 'Lưu vào danh sách phát',
       share: 'Chia sẻ',
-      notInterested: 'Không quan tâm',
-      dontRecommendChannel: 'Không đề xuất kênh',
+      not_interested: 'Không quan tâm',
+      dont_recommend_channel: 'Không đề xuất kênh',
       report: 'Báo cáo',
     },
   },
