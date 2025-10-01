@@ -1,6 +1,6 @@
 import type { TFunction } from 'i18next'
 
-const VideoData = (t: TFunction<'translation', undefined>) => [
+const generateVideoData = (t: TFunction<'translation', undefined>) => [
   {
     id: '1',
     title: t('video_card.video.title'),
@@ -56,4 +56,4 @@ const VideoData = (t: TFunction<'translation', undefined>) => [
     time: t('video_card.time.days', { count: 1 }),
   },
 ]
-export { VideoData }
+export { generateVideoData }
