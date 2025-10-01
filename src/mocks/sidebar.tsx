@@ -48,8 +48,8 @@ const menu2 = (t: TFunction<'translation', undefined>) => [
     url: '#',
   },
   {
-    id: 'watchLater',
-    title: t('sidebar.profile.watchLater'),
+    id: 'watch_later',
+    title: t('sidebar.profile.watch_later'),
     icon: <MdOutlineWatchLater {...iconProps} />,
     url: '#',
   },
@@ -98,7 +98,7 @@ const menu4 = (t: TFunction<'translation', undefined>) => [
   },
   {
     id: 'report-history',
-    title: t('sidebar.settings.reportHistory'),
+    title: t('sidebar.settings.report_history'),
     icon: <HiOutlineFlag {...iconProps} />,
     url: '#',
   },
@@ -110,7 +110,7 @@ const menu4 = (t: TFunction<'translation', undefined>) => [
   },
   {
     id: 'send-feedback',
-    title: t('sidebar.settings.sendFeedback'),
+    title: t('sidebar.settings.send_feedback'),
     icon: <RiFeedbackLine {...iconProps} />,
     url: '#',
   },

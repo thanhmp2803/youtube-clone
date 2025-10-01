@@ -9,7 +9,7 @@ const en = {
       you: 'You',
       history: 'History',
       playlist: 'Playlists',
-      watchLater: 'Watch later',
+      watch_later: 'Watch later',
       liked: 'Liked videos',
       downloads: 'Downloads',
     },
@@ -22,9 +22,9 @@ const en = {
     },
     settings: {
       settings: 'Settings',
-      reportHistory: 'Report history',
+      report_history: 'Report history',
       help: 'Help',
-      sendFeedback: 'Send feedback',
+      send_feedback: 'Send feedback',
     },
   },
   header: {
@@ -44,6 +44,31 @@ const en = {
     movies: 'Movies',
     cooking: 'Cooking',
     travel: 'Travel',
+  },
+  video_card: {
+    video: {
+      title: 'This is a cute cat',
+      channel: 'Channel Name',
+      views: 'views',
+      time: 'ago',
+    },
+    time: {
+      days_one: '{{count}} day',
+      days_other: '{{count}} days',
+      months_one: '{{count}} month',
+      months_other: '{{count}} months',
+      years_one: '{{count}} year',
+      years_other: '{{count}} years',
+    },
+    menu: {
+      add_to_queue: 'Add to queue',
+      save_to_watch_later: 'Save to Watch later',
+      save_to_playlist: 'Save to playlist',
+      share: 'Share',
+      not_interested: 'Not interested',
+      dont_recommend_channel: "Don't recommend channel",
+      report: 'Report',
+    },
   },
 }
 

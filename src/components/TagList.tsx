@@ -42,12 +42,12 @@ export const TagList: React.FC = () => {
   }, [])
 
   return (
-    <div className="position-relative ">
+    <div className="position-sticky py-1 taglist-container">
       {/* Left scroll button */}
       {showLeft && (
         <button
           type="button"
-          className="btn btn-light position-absolute top-50 mt-1 translate-middle-y rounded-circle tag-scroll-btn "
+          className="btn btn-light position-absolute top-50 translate-middle-y rounded-circle tag-scroll-btn"
           onClick={scrollLeft}
         >
           <FaChevronLeft />
@@ -56,7 +56,7 @@ export const TagList: React.FC = () => {
       <ul
         ref={listRef}
         onScroll={handleScroll}
-        className="nav d-flex flex-nowrap sticky-top overflow-x-auto ms-3 mb-2 hide-scrollbar"
+        className="nav d-flex flex-nowrap overflow-x-auto ms-3 mb-2 hide-scrollbar"
       >
         {tags.map((tag) => (
           <Tag
@@ -70,7 +70,7 @@ export const TagList: React.FC = () => {
       {/* Right scroll button */}
       <button
         type="button"
-        className="btn btn-light position-absolute top-50 end-0 mt-1 translate-middle-y rounded-circle tag-scroll-btn"
+        className="btn btn-light position-absolute top-50 end-0 translate-middle-y rounded-circle tag-scroll-btn"
         onClick={scrollRight}
       >
         <FaChevronRight />

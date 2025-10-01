@@ -9,7 +9,7 @@ const vi = {
       you: 'Bạn',
       history: 'Video đã xem',
       playlist: 'Danh sách phát',
-      watchLater: 'Xem sau',
+      watch_later: 'Xem sau',
       liked: 'Video đã thích',
       downloads: 'Nội dung tải xuống',
     },
@@ -22,9 +22,9 @@ const vi = {
     },
     settings: {
       settings: 'Cài đặt',
-      reportHistory: 'Nhật ký báo cáo',
+      report_history: 'Nhật ký báo cáo',
       help: 'Trợ giúp',
-      sendFeedback: 'Gửi ý kiến phản hồi',
+      send_feedback: 'Gửi ý kiến phản hồi',
     },
   },
   header: {
@@ -44,6 +44,31 @@ const vi = {
     movies: 'Phim',
     cooking: 'Nấu ăn',
     travel: 'Du lịch',
+  },
+  video_card: {
+    video: {
+      title: 'Đây là một chú mèo dễ thương',
+      channel: 'Tên kênh',
+      views: 'lượt xem',
+      time: 'trước',
+    },
+    time: {
+      days_one: '{{count}} ngày',
+      days_other: '{{count}} ngày',
+      months_one: '{{count}} tháng',
+      months_other: '{{count}} tháng',
+      years_one: '{{count}} năm',
+      years_other: '{{count}} năm',
+    },
+    menu: {
+      add_to_queue: 'Thêm vào danh sách chờ',
+      save_to_watch_later: 'Lưu vào Xem sau',
+      save_to_playlist: 'Lưu vào danh sách phát',
+      share: 'Chia sẻ',
+      not_interested: 'Không quan tâm',
+      dont_recommend_channel: 'Không đề xuất kênh',
+      report: 'Báo cáo',
+    },
   },
 }
 
