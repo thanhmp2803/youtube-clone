@@ -30,6 +30,16 @@ const vi = {
   header: {
     search: 'Tìm kiếm',
     create: 'Tạo',
+    login: 'Đăng nhập',
+    logout: 'Đăng xuất',
+  },
+  login: {
+    login: 'Đăng nhập',
+    password: 'Mật khẩu',
+    email_notice: 'Vui lòng nhập địa chỉ email hợp lệ',
+    password_notice:
+      'Mật khẩu phải có ít nhất 8 ký tự và chứa ít nhất một chữ cái thường, một chữ cái hoa, một số và một ký tự đặc biệt (!@#$%^&*)',
+    greeting: 'Xin chào',
   },
   tags: {
     all: 'Tất cả',
