@@ -30,6 +30,16 @@ const en = {
   header: {
     search: 'Search',
     create: 'Create',
+    login: 'Login',
+    logout: 'Logout',
+  },
+  login: {
+    login: 'Login',
+    password: 'Password',
+    email_notice: 'Please enter a valid email address',
+    password_notice:
+      'Password must be at least 8 characters long and contain at least one lowercase letter, one uppercase letter, one number, and one special character (!@#$%^&*)',
+    greeting: 'Hello',
   },
   tags: {
     all: 'All',

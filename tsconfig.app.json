@@ -30,7 +30,9 @@
       "@utils": ["./src/utils"],
       "@views": ["./src/views"],
       "@locales": ["./src/locales"],
-      "@mocks": ["./src/mocks"]
+      "@mocks": ["./src/mocks"],
+      "@hooks": ["./src/hooks"],
+      "@context": ["./src/context"]
     }
   },
   "include": ["src"]
