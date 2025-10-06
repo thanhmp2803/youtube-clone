@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { AuthContext } from '../context/AuthContextDefinition'
+import { AuthContext } from '@types'
 import { useLocalStorage } from '@hooks'
 
 export interface IUser {
