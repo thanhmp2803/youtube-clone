@@ -32,6 +32,8 @@ const vi = {
     create: 'Tạo',
     login: 'Đăng nhập',
     logout: 'Đăng xuất',
+    loading: 'Đang tải...',
+    end: 'Không còn video nào để tải',
   },
   login: {
     login: 'Đăng nhập',
