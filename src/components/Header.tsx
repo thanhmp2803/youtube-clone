@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { FaYoutube } from 'react-icons/fa'
@@ -7,7 +7,9 @@ import { BiSolidMicrophone, BiVideoPlus } from 'react-icons/bi'
 import { IoNotificationsOutline, IoArrowBack } from 'react-icons/io5'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '@hooks'
+import { useDebounce } from '@hooks'
 import '@assets/styles/header.css'
+import { SearchContext } from '@context'
 
 interface HeaderProps {
   collapsed: boolean
@@ -18,6 +20,13 @@ export const Header: React.FC<HeaderProps> = ({ collapsed, setCollapsed }) => {
   const { t } = useTranslation()
   const { user, logout } = useAuth()
   const navigate = useNavigate()
+  const { setSearchTerm } = useContext(SearchContext)!
+  const [inputValue, setInputValue] = useState('')
+  const debouncedValue = useDebounce(inputValue, 200)
+
+  useEffect(() => {
+    setSearchTerm(debouncedValue)
+  }, [debouncedValue, setSearchTerm])
 
   const menuProfile = user
     ? [
@@ -82,6 +91,8 @@ export const Header: React.FC<HeaderProps> = ({ collapsed, setCollapsed }) => {
               type="text"
               className="form-control rounded-start-pill"
               placeholder={t('header.search')}
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
             />
             <button className="btn btn-light border rounded-end-pill">
               <CiSearch size={22} />
@@ -106,6 +117,8 @@ export const Header: React.FC<HeaderProps> = ({ collapsed, setCollapsed }) => {
                   type="text"
                   className="form-control rounded-start-pill"
                   placeholder={t('header.search')}
+                  value={inputValue}
+                  onChange={(e) => setInputValue(e.target.value)}
                 />
                 <button className="btn btn-light border rounded-end-pill">
                   <CiSearch size={22} />

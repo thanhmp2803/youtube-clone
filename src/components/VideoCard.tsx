@@ -41,43 +41,37 @@ export const VideoCard: React.FC<{ video: IVideo }> = ({ video }) => {
       {/* Info */}
       <div className="card-body px-0 video-card">
         <div className="d-flex mt-2">
-          <button className="rounded-circle overflow-hidden p-0 m-0 me-2 avatar">
+          <div className="avatar rounded-circle overflow-hidden me-2">
             <img className="avatar-image" src={video.avatar} alt="User avatar" />
-          </button>
-          <div className="flex-grow-1">
-            <div className="d-flex align-items-start">
-              <h5 className="fw-bold text-truncate">{video.title} </h5>
-              <div className="dropdown ms-auto">
-                <button
-                  className="btn btn-sm rounded-circle pt-0"
-                  type="button"
-                  id="dropdownMenuButton"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <BsThreeDotsVertical />
-                </button>
-                {/* Menu action on button */}
-                <ul
-                  className="dropdown-menu dropdown-menu-end "
-                  aria-labelledby="dropdownMenuButton"
-                >
-                  {menuItems.map((item, index) => (
-                    <li key={index}>
-                      <button className="dropdown-item d-flex align-items-center" type="button">
-                        {item.icon} {item.label}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <p className="text-muted small mb-0">{video.channel} </p>
-            <p className="text-muted small">
-              {' '}
+          </div>
+          <div className="flex-grow-1 pe-2 min-width-0">
+            <h6 className="fw-bold video-title mb-1">{video.title}</h6>
+            <p className="text-muted small mb-0">{video.channel}</p>
+            <p className="text-muted small mb-0">
               {video.views} {t('video_card.video.views')} • {video.time}{' '}
               {t('video_card.video.time')}
             </p>
+          </div>
+          <div className="dropdown flex-shrink-0">
+            <button
+              className="btn btn-sm rounded-circle pt-0"
+              type="button"
+              id="dropdownMenuButton"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <BsThreeDotsVertical />
+            </button>
+            {/* Menu action on button */}
+            <ul className="dropdown-menu dropdown-menu-end " aria-labelledby="dropdownMenuButton">
+              {menuItems.map((item, index) => (
+                <li key={index}>
+                  <button className="dropdown-item d-flex align-items-center" type="button">
+                    {item.icon} {item.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

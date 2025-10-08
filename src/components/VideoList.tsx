@@ -1,22 +1,36 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react'
+import React, { useState, useEffect, useRef, useCallback, useContext, useMemo } from 'react'
 import { VideoCard } from './VideoCard'
 import { generateVideoData } from '@mocks'
 import { useTranslation } from 'react-i18next'
+import { SearchContext } from '@context'
 
 export const VideoList: React.FC = () => {
   const { t } = useTranslation()
-  const videos = generateVideoData(t)
-  const [visibleVideos, setVideo] = useState(videos.slice(0, 6))
-  const [page, setPage] = useState(1)
+  const videos = useMemo(() => generateVideoData(t), [t])
+
+  const searchContext = useContext(SearchContext)
+  const searchTerm = searchContext ? searchContext.searchTerm : ''
+
+  const filteredVideos = useMemo(() => {
+    return searchTerm
+      ? videos.filter((video) => video.title.toLowerCase().includes(searchTerm.toLowerCase()))
+      : videos
+  }, [searchTerm, videos])
+
+  const [visibleVideos, setVisibleVideos] = useState(() => filteredVideos.slice(0, 6))
   const loaderRef = useRef<HTMLDivElement | null>(null)
 
+  // Reset video list when filteredVideos changes
+  useEffect(() => {
+    setVisibleVideos(filteredVideos.slice(0, 6))
+  }, [filteredVideos])
+
   const loadMore = useCallback(() => {
-    const nextVideos = videos.slice(page * 6, (page + 1) * 6)
-    if (nextVideos.length > 0) {
-      setVideo((prev) => [...prev, ...nextVideos])
-      setPage((prev) => prev + 1)
-    }
-  }, [videos, page])
+    setVisibleVideos((prev) => {
+      const nextCount = prev.length + 6
+      return filteredVideos.slice(0, nextCount)
+    })
+  }, [filteredVideos])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -43,7 +57,7 @@ export const VideoList: React.FC = () => {
       </div>
 
       <div ref={loaderRef} className="text-center py-3 bg-white">
-        {visibleVideos.length < videos.length ? (
+        {visibleVideos.length < filteredVideos.length ? (
           <span>{t('header.loading')}</span>
         ) : (
           <span>{t('header.end')}</span>
