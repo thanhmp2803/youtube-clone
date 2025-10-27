@@ -32,6 +32,8 @@ const en = {
     create: 'Create',
     login: 'Login',
     logout: 'Logout',
+    loading: 'Loading...',
+    end: 'No more videos to load',
   },
   login: {
     login: 'Login',
